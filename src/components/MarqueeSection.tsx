@@ -18,7 +18,7 @@ export const MarqueeSection = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 25,
+              duration: 30,
               ease: "linear",
             },
           }}
@@ -40,7 +40,7 @@ export const MarqueeSection = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 25,
+              duration: 30,
               ease: "linear",
             },
           }}

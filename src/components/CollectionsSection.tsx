@@ -54,18 +54,17 @@ export const CollectionsSection = () => {
                   delay: index * 0.15,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                whileHover={{ y: -8 }}
                 className="group relative aspect-[4/3] md:aspect-[16/10] overflow-hidden cursor-pointer"
               >
                 {/* Background Image */}
                 <motion.img
                   src={collection.image}
                   alt={collection.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110"
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-70 md:group-hover:opacity-90 transition-opacity duration-500" />
 
                 {/* Content */}
                 <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
@@ -84,12 +83,10 @@ export const CollectionsSection = () => {
 
                   {/* Hover Arrow */}
                   <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileHover={{ opacity: 1, x: 0 }}
-                    className="absolute top-8 right-8 md:top-12 md:right-12"
+                    className="absolute top-8 right-8 md:top-12 md:right-12 md:opacity-0 md:group-hover:opacity-100"
                   >
-                    <div className="w-12 h-12 rounded-full border border-foreground/30 flex items-center justify-center group-hover:bg-foreground group-hover:border-foreground transition-all duration-500">
-                      <ArrowUpRight className="w-5 h-5 group-hover:text-background transition-colors" />
+                    <div className="w-12 h-12 rounded-full border border-foreground/30 flex items-center justify-center md:group-hover:bg-foreground md:group-hover:border-foreground transition-all duration-500">
+                      <ArrowUpRight className="w-5 h-5 md:group-hover:text-background transition-colors" />
                     </div>
                   </motion.div>
                 </div>

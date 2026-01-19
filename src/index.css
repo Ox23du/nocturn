@@ -43,7 +43,7 @@
     --input: 0 0% 18%;
     --ring: 0 0% 40%;
     
-    --radius: 0.25rem;
+    --radius: 0.75rem;
     
     /* Tokens personalizados da marca */
     --gold: 45 70% 50%;
@@ -122,11 +122,11 @@
 /* Button variants */
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold text-sm uppercase tracking-widest transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold text-sm uppercase tracking-widest transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] rounded-full;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border border-primary/30 text-foreground font-semibold text-sm uppercase tracking-widest transition-all duration-300 hover:bg-primary/10 hover:border-primary/60;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border border-primary/30 text-foreground font-semibold text-sm uppercase tracking-widest transition-all duration-300 hover:bg-primary/10 hover:border-primary/60 rounded-full;
   }
   
   .btn-ghost {
@@ -360,8 +360,8 @@
   border-color: hsl(var(--primary));
 }
 
-/* Hide default cursor on desktop */
-@media (hover: hover) {
+/* Hide default cursor on desktop only (not on mobile) */
+@media (min-width: 768px) and (hover: hover) {
   body {
     cursor: none;
   }
